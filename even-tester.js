@@ -5,9 +5,15 @@ function isEven(a) {
 	else if (a == 0) {
 		return "Even";
 	}
-	else {
+	else if (a > 1) {
 		return isEven(a - 2);
+	}
+	else if (a < 0) {
+		return isEven(a + 2);
+	}
+	else {
+		return "Error";
 	}
 }
 
-console.log(isEven(60));
+console.log(isEven(-60));
